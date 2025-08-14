@@ -1,4 +1,4 @@
-# Landslide Detection
+<img width="450" height="319" alt="image" src="https://github.com/user-attachments/assets/18aa0e8f-83ec-454e-ba34-1379fa88653c" /># Landslide Detection
 
 ## 1. Business Understanding
 Landslides are among the most destructive natural hazards, causing loss of life, infrastructure damage, and significant economic disruption.  
@@ -58,24 +58,35 @@ To improve model performance, multiple SAR and optical features were engineered:
 
 ## 4. Modelling
 
-### 4.1 LightGBM
+### 4.1 XGBoost
+Regularized gradient boosting algorithm known for high performance and overfitting control.
+
+**Validation Performance**  
+- **F1 Score:** 0.8528
+- Accuracy: 0.9463  
+- AUC: 0.9834
+
+**AUC **
+<img width="450" height="319" alt="xgb" src="https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3" />
+
+**Confusion Matrix**
+<img width="450" height="315" alt="xgb" src="https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a" />
+
+---
+
+### 4.2 LightGBM
 Gradient boosting decision tree model optimized for speed and accuracy.
 
 **Validation Performance**  
 - **F1 Score:** 0.8567
-- Accuracy: 0.9519   
-- AUC: 0.98 
+- Accuracy: 0.9519
+- AUC: 0.9838
 
+**AUC**
+<img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a" />
 
----
-
-### 4.2 XGBoost
-Regularized gradient boosting algorithm known for high performance and overfitting control.
-
-**Validation Performance**  
-- **F1 Score:** 0.8466
-- Accuracy: 0.9463  
-- AUC: 0.98
+**Confusion Matrix**
+<img width="451" height="315" alt="xgb" src="https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b" />
 
 ---
 
@@ -86,7 +97,11 @@ Ensemble model combining LightGBM and XGBoost outputs for improved generalizatio
 - F1 Score: 0.8567
 - Accuracy: 0.9519 
 - AUC: 0.98
-- 
+
+**AUC**
+
+**Confusion Matrix**
+
 ---
 
 ### 4.4 CNN (EfficientNetV2-B0)
