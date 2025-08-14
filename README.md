@@ -21,7 +21,7 @@ This project aims to **detect and classify landslides** from satellite imagery u
 - `1` – Landslide  
 - `0` – No Landslide
 
-<img width="1600" height="800" alt="my_plot_highres" src="https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154" />
+<img width="600" height="400" alt="my_plot_highres" src="https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154" />
 
 ---
 
