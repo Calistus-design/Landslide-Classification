@@ -1,7 +1,7 @@
 # 🌍 Landslide Classification Project
 
 🌐 **[Launch Web App](https://landslideclassification.streamlit.app/)** – Try the interactive Landslide Classification tool.  
-📓 **[View Notebook & Datasets](https://www.kaggle.com/code/arthur254/cnn-xgbm-sotr-efficientnetv2b0173ef58638-8f7654)** – Access the full pipeline, code, and datasets.  
+📓 **[View Notebook & Datasets](https://www.kaggle.com/code/arthur254/cnn-xgbm-sotr-efficientnetv2b0173ef58638-8f7654)** – Access the noteboo and datasets.  
 
 ---
 
@@ -80,8 +80,8 @@ Faster training, lower memory usage, and excellent accuracy.
 - **Accuracy:** **0.9519**  
 - **AUC:** 0.9838  
 
-<img src="https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a" width="451" height="320" />  
-<img src="https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a" width="520" height="500" />  
+<img src="https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b" width="520" height="500" />   
 
 ---
 
@@ -92,8 +92,8 @@ Meta-ensemble combining LightGBM & XGBoost predictions.
 - **Accuracy:** 0.9502  
 - **AUC:** 0.9828  
 
-<img src="https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84" width="451" height="320" />  
-<img src="https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84" width="520" height="500" />   
+<img src="https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8" width="520" height="500" />  
 
 ---
 
@@ -104,8 +104,8 @@ Transfer learning on SAR + optical bands.
 - **Accuracy:** 0.9200  
 - **AUC:** 0.9647  
 
-<img src="https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df" width="451" height="320" />  
-<img src="https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df" width="520" height="500" />    
+<img src="https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b" width="520" height="500" />   
 
 ---
 
