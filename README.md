@@ -1,175 +1,139 @@
-# **LANDSLIDE CLASSIFICATION PROJECT**
+# 🌍 Landslide Classification Project
 
-🌐 [Access the Web App](https://landslideclassification.streamlit.app/) – Launch the interactive Landslide Classification tool.
-
-💻 [View the Full Notebook & Datasets on Kaggle ](https://www.kaggle.com/code/arthur254/cnn-xgbm-sotr-efficientnetv2b0173ef58638-8f7654) – Includes the notebook and datasets.
-## 1. Business Understanding
-Landslides are among the most destructive natural hazards, causing loss of life, infrastructure damage, and significant economic disruption.  
-This project aims to **detect and classify landslides** from satellite imagery using models that can operate effectively even in persistent cloud cover.
-
-### Objectives
-1. Develop a detection pipeline using both **optical** and **Synthetic Aperture Radar (SAR)** satellite data.
-2. Evaluate traditional ML and deep learning models using **F1 score** as the primary metric.
-3. Provide a deployable and scalable model for integration into early-warning and disaster response systems.
+🌐 **[Launch Web App](https://landslideclassification.streamlit.app/)** – Try the interactive Landslide Classification tool.  
+📓 **[View Notebook & Datasets](https://www.kaggle.com/code/arthur254/cnn-xgbm-sotr-efficientnetv2b0173ef58638-8f7654)** – Access the full pipeline, code, and datasets.  
 
 ---
 
-## 2. Data Understanding
-**Source:** ESA Copernicus Sentinel-1 & Sentinel-2 satellites.
+## 1️⃣ Business Understanding
+Landslides are among the most devastating natural hazards, causing significant loss of life, damage to infrastructure, and economic disruption. Detecting and classifying landslides quickly is critical for **early warning** and **disaster response systems**—especially in regions with persistent cloud cover.
 
-- **Sentinel-1 (SAR)** → Radar data (VV & VH polarizations), works through clouds, sensitive to surface roughness and moisture.
-- **Sentinel-2 (Optical)** → RGB + NIR bands, provides vegetation and terrain information.
+### 🎯 Objectives
+1. Build an accurate classification system using **optical** and **Synthetic Aperture Radar (SAR)** satellite data.
+2. Compare traditional ML and deep learning approaches, using **F1 score** as the primary metric.
+3. Deliver a scalable, deployable model ready for integration into real-world disaster monitoring pipelines.
+
+---
+
+## 2️⃣ Data Understanding
+**Source:** ESA Copernicus **Sentinel-1** (SAR) & **Sentinel-2** (Optical) satellites.
+
+- **Sentinel-1 SAR** → VV & VH polarizations; unaffected by cloud cover; sensitive to surface roughness and moisture.  
+- **Sentinel-2 Optical** → RGB + NIR bands; captures vegetation health, terrain changes, and water coverage.
 
 **Target Variable:**  
 - `1` – Landslide  
-- `0` – No Landslide
+- `0` – No Landslide  
 
-<img width="800" height="500" alt="my_plot_highres" src="https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154" />
+![Example Landslide Imagery](https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154)
 
 ---
 
-## 3. Data Preparation
+## 3️⃣ Data Preparation
 
-### 3.1 Cleaning
-- Removed corrupted or incomplete image tiles.
-- Checked and maintained consistent coordinate reference systems.
-- Handled missing values in derived indices.
+### 🧹 Cleaning
+- Removed corrupted/incomplete tiles.
+- Standardized coordinate reference systems.
+- Addressed missing values in derived indices.
 
-### 3.2 Feature Engineering
-To improve model performance, multiple SAR and optical features were engineered:
+### ⚙️ Feature Engineering
 
-**SAR-Derived Features**
-- **Backscatter Ratios:** VV/VH ratio to highlight terrain structure.
-- **Texture Measures:** GLCM texture features (contrast, homogeneity, entropy).
-- **Speckle Filtering:** Enhanced signal-to-noise for more stable backscatter values.
+**SAR-Derived Features:**
+- **Backscatter Ratios:** VV/VH for structural contrast.
+- **Texture Measures:** GLCM contrast, homogeneity, entropy.
+- **Speckle Filtering:** Reduced noise for stable backscatter values.
 
-**Optical-Derived Features**
-- **Vegetation Indices:** NDVI, SAVI to capture vegetation cover changes.
-- **Water Index:** NDWI to identify water-logged regions.
-- **Burn Ratio:** NBR for detecting recent soil disturbances.
+**Optical-Derived Features:**
+- **Vegetation Indices:** NDVI, SAVI for vegetation cover.
+- **Water Index:** NDWI to detect water-logged areas.
+- **Burn Ratio (NBR):** Soil disturbance detection.
 
-**Band Statistics**
-- Per-band means, standard deviations, and percentiles.
-- Ratios between selected bands to capture spectral relationships.
+**Statistical Features:**
+- Per-band means, standard deviations, percentiles.
+- Ratios between key bands to highlight spectral patterns.
 
-**For CNN**
+**For CNN Models:**
 - Raw patch extraction from multi-band imagery.
-- Data augmentation: flips, rotations, brightness/contrast adjustments.
-- Conversion to TFRecords for efficient training in TensorFlow.
+- Data augmentation: flips, rotations, brightness & contrast adjustments.
+- Conversion to TFRecords for efficient TensorFlow training.
 
 ---
 
-## 4. Modelling
+## 4️⃣ Modelling
 
-### 4.1 XGBoost
-Regularized gradient boosting algorithm known for high performance and overfitting control.
+### 🟦 4.1 XGBoost
+Regularized gradient boosting with strong overfitting control.  
 
-**Validation Performance**  
-- **F1 Score:** 0.8528
-- Accuracy: 0.9463  
-- AUC: 0.9834
+- **F1 Score:** 0.8466  
+- **Accuracy:** 0.9463  
+- **AUC:** 0.9834  
 
-**AUC **
-
-
-<img width="450" height="319" alt="xgb" src="https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3" />
-
-
-**Confusion Matrix**
-
-
-<img width="450" height="315" alt="xgb" src="https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a" />
+![XGB AUC](https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3)  
+![XGB Confusion Matrix](https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a)  
 
 ---
 
-### 4.2 LightGBM
-Gradient boosting decision tree model optimized for speed and accuracy.
+### 🟩 4.2 LightGBM – **Best Performer**
+Faster training, lower memory usage, and excellent accuracy.  
 
-**Validation Performance**  
-- **F1 Score:** 0.8567
-- Accuracy: 0.9519
-- AUC: 0.9838
+- **F1 Score:** **0.8567**  
+- **Accuracy:** **0.9519**  
+- **AUC:** 0.9838  
 
-**AUC**
-
-
-<img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a" />
-
-
-**Confusion Matrix**
-
-
-<img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b" />
-
+![LGBM AUC](https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a)  
+![LGBM Confusion Matrix](https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b)  
 
 ---
 
-### 4.3 Stacking Classifier
-Ensemble model combining LightGBM and XGBoost outputs for improved generalization.
+### 🟨 4.3 Stacking Classifier
+Meta-ensemble combining LightGBM & XGBoost predictions.  
 
-**Validation Performance**  
-- F1 Score: 0.8529
-- Accuracy: 0.9502
-- AUC: 0.9828
+- **F1 Score:** 0.8529  
+- **Accuracy:** 0.9502  
+- **AUC:** 0.9828  
 
-**AUC**
-
-
-<img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84" />
-
-
-**Confusion Matrix**
-
-
-<img width="450" height="311" alt="xgb" src="https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8" />
-
-
+![Stacking AUC](https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84)  
+![Stacking Confusion Matrix](https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8)  
 
 ---
 
-### 4.4 CNN (EfficientNetV2-B0)
-Transfer learning–based deep convolutional neural network trained with SAR + optical bands.
+### 🟥 4.4 CNN – EfficientNetV2-B0
+Transfer learning on SAR + optical bands.  
 
-**Validation Performance**  
-- F1 Score: 0.7796 
-- Accuracy: 0.92
-- AUC: 0.9647 
+- **F1 Score:** 0.7796  
+- **Accuracy:** 0.9200  
+- **AUC:** 0.9647  
 
-**AUC**
+![CNN AUC](https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df)  
+![CNN Confusion Matrix](https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b)  
 
+---
 
-<img width="422" height="326" alt="xgb" src="https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df" />
+## 5️⃣ Evaluation Summary
 
-
-**Confusion Matrix**
-
-
-<img width="396" height="325" alt="xgb" src="https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b" />
-
-
-
-## 5. Evaluation Summary
-
-**Primary Metric:** **F1 Score** – chosen to balance false positives and false negatives in a disaster response context.
+**Metric:** F1 score – chosen to balance false positives and false negatives in a high-risk disaster response scenario.
 
 | Rank | Model                   | F1 Score   | Accuracy   | AUC    |
-| ---- | ----------------------- | ---------- | ---------- | -------|
-| 1    | LightGBM                | **0.8567** | **0.9519** | 0.9838 |
-| 1    | Stacking Classifier     | 0.8529     | 0.9502     | 0.9828 |
-| 3    | XGBoost                 | 0.8466     | 0.9463     | 0.9834 |
-| 4    | CNN (EfficientNetV2-B0) | 0.7796     | 0.9200     | 0.9647 |
+|------|------------------------|-----------|-----------|--------|
+| **1** | LightGBM               | **0.8567** | **0.9519** | 0.9838 |
+| 2     | Stacking Classifier    | 0.8529     | 0.9502     | 0.9828 |
+| 3     | XGBoost                | 0.8466     | 0.9463     | 0.9834 |
+| 4     | CNN (EffNetV2-B0)      | 0.7796     | 0.9200     | 0.9647 |
 
-### Best Model - LightGB Model
----
-
-## 6. Deployment
-- Deployed the LightGBM model along with the preprocessing pipeline for inference.
-- Created a FastAPI backend to serve model predictions, hosted on Railway for cloud-based access.
-- Built a Streamlit frontend to allow users to upload satellite imagery and view prediction results interactively, hosted on Streamlit Cloud.
+✅ **Recommendation:** Use **LightGBM** for deployment—it delivers the best F1 score and accuracy while maintaining fast inference speeds.
 
 ---
 
-## 7. Future Work
-- Integrate temporal sequences for early landslide detection.
-- Explore vision transformers (ViTs) for improved feature extraction.
-- Extend to multi-class severity classification.
+## 6️⃣ Deployment
+- **Model:** LightGBM + preprocessing pipeline.
+- **Backend:** FastAPI, hosted on Railway.
+- **Frontend:** Streamlit web app for image uploads & predictions, hosted on Streamlit Cloud.
+
+---
+
+## 7️⃣ Future Work
+- Incorporate **temporal sequences** for early detection.
+- Experiment with **Vision Transformers (ViTs)** for richer feature extraction.
+- Extend to **multi-class severity prediction** (low, medium, high impact).
+
+---
