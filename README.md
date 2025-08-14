@@ -68,8 +68,8 @@ Regularized gradient boosting with strong overfitting control.
 - **Accuracy:** 0.9463  
 - **AUC:** 0.9834  
 
-<img src="https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3" width="451" height="320" />  
-<img src="https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3" width="470" height="400" />  
+<img src="https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a" width="470" height="400" />  
 
 ---
 
