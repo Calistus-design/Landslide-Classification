@@ -1,4 +1,4 @@
-Landslide Detection
+# **Landslide Detection**
 
 ## 1. Business Understanding
 Landslides are among the most destructive natural hazards, causing loss of life, infrastructure damage, and significant economic disruption.  
@@ -68,9 +68,12 @@ Regularized gradient boosting algorithm known for high performance and overfitti
 
 **AUC **
 
+
 <img width="450" height="319" alt="xgb" src="https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3" />
 
+
 **Confusion Matrix**
+
 
 <img width="450" height="315" alt="xgb" src="https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a" />
 
@@ -86,11 +89,15 @@ Gradient boosting decision tree model optimized for speed and accuracy.
 
 **AUC**
 
+
 <img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a" />
+
 
 **Confusion Matrix**
 
+
 <img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b" />
+
 
 ---
 
@@ -104,11 +111,15 @@ Ensemble model combining LightGBM and XGBoost outputs for improved generalizatio
 
 **AUC**
 
+
 <img width="451" height="317" alt="xgb" src="https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84" />
+
 
 **Confusion Matrix**
 
+
 <img width="450" height="311" alt="xgb" src="https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8" />
+
 
 
 ---
@@ -123,11 +134,15 @@ Transfer learning–based deep convolutional neural network trained with SAR + o
 
 **AUC**
 
+
 <img width="422" height="326" alt="xgb" src="https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df" />
+
 
 **Confusion Matrix**
 
+
 <img width="396" height="325" alt="xgb" src="https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b" />
+
 
 
 ## 5. Evaluation Summary
@@ -136,18 +151,18 @@ Transfer learning–based deep convolutional neural network trained with SAR + o
 
 | Rank | Model                   | F1 Score   | Accuracy   | AUC    |
 | ---- | ----------------------- | ---------- | ---------- | -------|
-| 1    | LightGBM                | **0.8567** | **0.9519** | 0.9800 |
-| 1    | Stacking Classifier     | **0.8567** | **0.9519** | 0.9800 |
-| 3    | XGBoost                 | 0.8466     | 0.9463     | 0.9800 |
+| 1    | LightGBM                | **0.8567** | **0.9519** | 0.9838 |
+| 1    | Stacking Classifier     | 0.8529     | 0.9502     | 0.9828 |
+| 3    | XGBoost                 | 0.8466     | 0.9463     | 0.9834 |
 | 4    | CNN (EfficientNetV2-B0) | 0.7796     | 0.9200     | 0.9647 |
 
 
 ---
 
 ## 6. Deployment
-- Packaged the CNN model and preprocessing pipeline for inference.
-- Provided a REST API for batch predictions from satellite data.
-- Integrated into GIS dashboards for decision support.
+- Deployed the LightGBM model along with the preprocessing pipeline for inference.
+- Created a FastAPI backend to serve model predictions, hosted on Railway for cloud-based access.
+- Built a Streamlit frontend to allow users to upload satellite imagery and view prediction results interactively, hosted on Streamlit Cloud.
 
 ---
 
