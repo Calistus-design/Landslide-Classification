@@ -1,0 +1,33 @@
+# Core Libraries
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.14.1
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.24.1
+
+# Scikit-learn & Related
+scikit-learn==1.5.2
+
+# Gradient Boosted Models
+xgboost==2.1.1
+lightgbm==4.3.0
+
+# Hyperparameter Tuning
+optuna==3.6.1
+
+# Model Interpretability
+shap==0.46.0
+
+# Deep Learning
+tensorflow==2.17.0
+keras==3.5.0
+
+# Utility
+joblib==1.4.2
+tqdm==4.66.5
+
+# Notebook & Display
+ipython==8.26.0
