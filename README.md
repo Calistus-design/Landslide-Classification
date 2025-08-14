@@ -136,4 +136,29 @@ Transfer learning on SAR + optical bands.
 - Experiment with **Vision Transformers (ViTs)** for richer feature extraction.
 - Extend to **multi-class severity prediction** (low, medium, high impact).
 
+## 📁 Project Structure
+
+```plaintext
+Landslide-Classification/
+│
+├── LandslideDetection.ipynb
+├── README.md
+│
+└── deployment/
+    ├── __pycache__/
+    ├── assets/
+    │   └── landslide_banner.jpg
+    ├── model/
+    │   ├── X_train.pkl
+    │   ├── lgb_model.pkl
+    │   └── selected_features.pkl
+    ├── pages/
+    │   ├── Prediction.py
+    │   └── Training_Data.py
+    ├── ID_005GY8.npy
+    ├── app.py
+    ├── data_prep.py
+    ├── LandslideDetection.ipynb
+    └── README.md
+
 ---
