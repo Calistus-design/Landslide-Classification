@@ -25,7 +25,7 @@ Landslides are among the most devastating natural hazards, causing significant l
 - `1` – Landslide  
 - `0` – No Landslide  
 
-![Example Landslide Imagery](https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154)
+<img src="https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154" width="451" height="320" />
 
 ---
 
@@ -68,8 +68,8 @@ Regularized gradient boosting with strong overfitting control.
 - **Accuracy:** 0.9463  
 - **AUC:** 0.9834  
 
-![XGB AUC](https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3)  
-![XGB Confusion Matrix](https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a)  
+<img src="https://github.com/user-attachments/assets/521557c8-15d9-48ad-9a80-bcb8d3d9bbe3" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/4015c86b-490e-42fe-889b-d68a3ec8713a" width="451" height="320" />  
 
 ---
 
@@ -80,8 +80,8 @@ Faster training, lower memory usage, and excellent accuracy.
 - **Accuracy:** **0.9519**  
 - **AUC:** 0.9838  
 
-![LGBM AUC](https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a)  
-![LGBM Confusion Matrix](https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b)  
+<img src="https://github.com/user-attachments/assets/318d5c5f-4219-4bcf-bfff-7e1cee86097a" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/936e164a-ad40-4b48-bd99-eb6d6ef0159b" width="451" height="320" />  
 
 ---
 
@@ -92,8 +92,8 @@ Meta-ensemble combining LightGBM & XGBoost predictions.
 - **Accuracy:** 0.9502  
 - **AUC:** 0.9828  
 
-![Stacking AUC](https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84)  
-![Stacking Confusion Matrix](https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8)  
+<img src="https://github.com/user-attachments/assets/e1aaa132-e71d-4ff0-9b73-eec5d4fabd84" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/0d2a7f44-d514-4506-bb9c-453e0983eae8" width="451" height="320" />  
 
 ---
 
@@ -104,8 +104,8 @@ Transfer learning on SAR + optical bands.
 - **Accuracy:** 0.9200  
 - **AUC:** 0.9647  
 
-![CNN AUC](https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df)  
-![CNN Confusion Matrix](https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b)  
+<img src="https://github.com/user-attachments/assets/33ff5aa1-169e-444c-9e0b-9fdad0c458df" width="451" height="320" />  
+<img src="https://github.com/user-attachments/assets/f1d5f888-7022-4dba-a632-485fbe15606b" width="451" height="320" />  
 
 ---
 
