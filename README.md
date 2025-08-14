@@ -1,4 +1,4 @@
-<img width="450" height="319" alt="image" src="https://github.com/user-attachments/assets/18aa0e8f-83ec-454e-ba34-1379fa88653c" /># Landslide Detection
+Landslide Detection
 
 ## 1. Business Understanding
 Landslides are among the most destructive natural hazards, causing loss of life, infrastructure damage, and significant economic disruption.  
