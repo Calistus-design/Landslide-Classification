@@ -1,4 +1,4 @@
-# **Landslide Detection**
+# **LANDSLIDE CLASSIFICATION PROJECT**
 
 ## 1. Business Understanding
 Landslides are among the most destructive natural hazards, causing loss of life, infrastructure damage, and significant economic disruption.  
@@ -156,7 +156,7 @@ Transfer learning–based deep convolutional neural network trained with SAR + o
 | 3    | XGBoost                 | 0.8466     | 0.9463     | 0.9834 |
 | 4    | CNN (EfficientNetV2-B0) | 0.7796     | 0.9200     | 0.9647 |
 
-
+### Best Model - LightGB Model
 ---
 
 ## 6. Deployment
