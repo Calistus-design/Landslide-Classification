@@ -1,7 +1,8 @@
 # **LANDSLIDE CLASSIFICATION PROJECT**
 
-[Click Here](https://landslideclassification.streamlit.app/) to access the Web App.
-[Click Here](https://www.kaggle.com/code/arthur254/cnn-xgbm-sotr-efficientnetv2b0173ef58638-8f7654) to access the the notebook together with the datasets.
+🌐 [Access the Web App](https://landslideclassification.streamlit.app/) – Launch the interactive Landslide Classification tool.
+
+💻 [View the Full Notebook & Datasets on Kaggle ](https://www.kaggle.com/code/arthur254/cnn-xgbm-sotr-efficientnetv2b0173ef58638-8f7654) – Includes the notebook and datasets.
 ## 1. Business Understanding
 Landslides are among the most destructive natural hazards, causing loss of life, infrastructure damage, and significant economic disruption.  
 This project aims to **detect and classify landslides** from satellite imagery using models that can operate effectively even in persistent cloud cover.
