@@ -25,7 +25,7 @@ Landslides are among the most devastating natural hazards, causing significant l
 - `1` – Landslide  
 - `0` – No Landslide  
 
-<img src="https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154" width="451" height="320" />
+<img src="https://github.com/user-attachments/assets/414b3faa-82a9-467d-ada0-5efd482d9154" width="520" height="500" />  
 
 ---
 
