@@ -1,21 +1,7 @@
-# --- REQUIRED BY FastAPI/UVICORN ---
-fastapi
-uvicorn[standard]
-python-multipart
-
-# --- REQUIRED BY MODEL LOADING & PREDICTION (MAIN.PY/DATAPREP.PY) ---
-# Versions are *removed* to allow the cloud environment (Python 3.13) to pick compatible ones.
-joblib
-shap
-numpy
-pandas
-scipy
-scikit-learn
-
-# Since your model used LightGBM, you must include it here.
-lightgbm
-xgboost
-
-# --- REQUIRED BY STREAMLIT FRONTEND ---
 streamlit
 requests
+
+# Add all visualization libraries used in Prediction.py and Training_Data.py
+matplotlib
+seaborn
+plotly
