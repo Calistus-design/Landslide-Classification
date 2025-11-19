@@ -19,3 +19,8 @@ xgboost
 # --- REQUIRED BY STREAMLIT FRONTEND ---
 streamlit
 requests
+
+# Add all visualization libraries used in Prediction.py and Training_Data.py
+matplotlib
+seaborn
+plotly
