@@ -18,6 +18,6 @@ Use the sidebar to navigate between:
 """)
 
 # Image / hero section
-st.image("assets/landslide_banner.jpg", use_container_width=True, caption="AI-powered Landslide Risk Prediction")
+st.image("static/landslide_banner.jpg", use_container_width=True, caption="AI-powered Landslide Risk Prediction")
 
 
